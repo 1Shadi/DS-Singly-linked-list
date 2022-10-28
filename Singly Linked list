@@ -1,0 +1,23 @@
+class linkedListNode: # defining variables
+    def __init__(self, value, nextNode=None):
+        self.value = value
+        self.nextNode = nextNode
+
+node1 = linkedListNode("3")
+node2 = linkedListNode("7")
+node3 = linkedListNode("10")
+
+node1.nextNode = node2 # node1 >> node2 , "3" >> "7"
+node2.nextNode = node3 # 7 > 10
+
+currentNode = node1
+while True:
+    print(currentNode.value, end='') # if true it'll print node1
+    if currentNode.nextNode is None: # once it reaches TAIL, it will print None
+        print("None")
+        break
+        currentNode = currentNode.nextNode
+
+
+
+
